@@ -1,0 +1,205 @@
+Windows 用
+
+	バランスWiiボード 用体重計
+	WBHealthMeter v1.13
+
+
+Wii Fit についてくる「バランスWiiボード」を PC につないで、まじめに体重測定を
+行うためのソフトです。
+
+体重測定のみに特化し、できるだけ普通の体重計に近い挙動にしました。
+
+特徴
+・身長などの面倒なパラメータ設定が不要で、すぐ使える
+・アナログ針メーター付き
+・設定無しに自分のおよその BMI がわかる、BMI バー
+・4ユーザー分のログ保存機能
+
+
+v1.10
+・Bluetooth Toshiba stack と Bluesoleil に対応しました。ただしペアリングは
+　それぞれツール固有の設定画面で行う必要があります。
+
+
+
+●動作環境
+
+v1.12 の動作確認は下記の環境で行いました。
+
+　・Windows 10 x64 RAM 16GB
+　・PLANEX BT-Mini2EDR (Bluetoothアダプタ) + Windows bluetooth stack
+
+
+
+v1.11 は WindowsXP SP2以降 / Vista で動作します。
+v1.11 の動作確認は下記の環境で行いました。
+
+PC1
+　・Windows Vista x64 RAM 6GB
+　・PLANEX BT-Mini2EDR (Bluetoothアダプタ) + WindowsVista bluetooth stack
+　・PLANEX BT-MicroEDR2 (Bluetoothアダプタ) + Bluesoleil 5.0.5.178 x64
+
+PC2
+　・Windows Vista x86 RAM 1GB
+　・Princeton PMT-UBT3S (Bluetoothアダプタ) + WindowsVista bluetooth Stack
+　・Princeton PMT-UBT3S (Bluetoothアダプタ) + Toshiba bluetooth Stack 5.10.15
+
+PC3
+　・Windows XP SP2 x64 RAM 2.5GB
+　・PLANEX BT-MicroEDR2 (Bluetoothアダプタ) + WindowsXP bluetooth stack
+
+PC4
+　・Windows XP SP2 x86 RAM 1GB
+　・PLANEX BT-UBT3S (Bluetoothアダプタ) + WindowsXP bluetooth stack
+
+
+
+
+
+
+●注意点
+
+・自己責任で使ってください。動作保証ありません。
+・バランスWiiボードの説明書に書かれている注意事項を良く読んで、必ず安全に
+　使用してください。
+・このソフトの使用により バランスWiiボード や周囲の物が壊れても責任は取り
+　ません。
+
+
+
+●インストール方法
+
+アーカイブ内のファイルを任意のフォルダに置いてください。
+
+
+
+●アンインストール方法
+
+そのままファイルを削除して構いません。
+ログファイルが My Documents (Vista は Documents) の
+
+  WBHealthMeter_log.txt
+
+に書き込まれています。不要な場合このファイルも削除してください。
+
+
+
+●使い方
+
+バランスWiiボードをペアリングし、接続状態にしてから WBHealthMeter.exe を
+実行してください。
+
+接続方法は使用している Bluetooth ドライバ (stack) によって異なります。
+
+
+
+●ペアリング＆接続方法
+
+画面の指示に従い、バランスWiiボードの電池ボックス内にある赤い Sync ボタンを
+押してください。
+
+・WindowsVista stack の場合
+
+　WBHealthMeter を起動後、メニューの「BalanceBoard」→「バランスWiiボード登録」
+　を実行してください。
+　またはコントロールパネルの Bluetooth マネージャから登録することもできます。
+　電源を入れなおした場合など、毎回ペアリングの再登録が必要です。
+
+・Toshiba stack / Bluesoleil の場合
+
+　それぞれのツールに付いてくる機器登録画面から登録してください。
+　機器の検索でアイコンが表示されたら、さらに「接続」する必要があります。
+　このときも Sync ボタンを押しておいてください。
+
+
+※ペアリングだけできても、その後のデータ通信できなくなることがあります。
+　この場合一度 バランスWiiボードの電池を抜いて、入れなおしてみてください。
+
+
+
+●キャリブレーション (0kg調整)
+
+接続直後 1～2秒間キャリブレーション(0kg調整)が行われます。「初期化中」の表示
+が消えるまでは バランスWiiボード に乗らないようにしてください。
+
+メニューの「BalanceBoard」→「キャリブレーション(0kg調整)」からいつでもキャリ
+ブレーションを行うことができます。
+
+
+
+●起動時に「発行元を確認できませんでした～」のエラーが出るときは
+
+WBHealthMeter.exe のプロパティを開いてブロックを解除してください。
+
+
+
+●測定
+
+起動中 バランスWiiボード の前面についている 電源 ボタンを押すと、測定モード
+になります。このままボードに乗ると、体重値が安定したときの値を保存します
+測定値は My Documents の
+
+	WBHealthMeter_log.txt
+
+に書き込みます。また画面には過去8件分まで表示します。
+
+ボタンを押すたびに測定するユーザーが切り替わります。
+メニューの「測定」から計測を始めることも可能です。
+
+
+
+●Realtime Log
+
+Start Realtime Log / Stop Realtime Log でより詳細な測定結果をファイルに
+保存することができます。
+My Documents の WBHealthMeter_realtime.txt ファイルに記録します。
+
+[TimeStamp], [W0], [W1], [W2], [W3], [Weight]
+
+  TimeStamp = msec 測定開始からの経過時間
+  W0 ～ W3  = 4 点のセンサーの値
+  Weight    = 体重値
+
+
+
+●BMIバー
+
+現在の体重における、各BMI と身長の対応をリアルタイム表示します。
+
+自分の身長をいちいち登録しなくても、おおよその BMI 値を確認することができます。
+
+
+
+
+●バランスWiiボードの解析情報や体重計ソフトなど
+
+プログラムについて、その他解説などは下記のblogを参照してください。
+
+・http://wlog.flatlib.jp/
+
+
+
+●最新版ダウンロード
+
+下記 URL からどうぞ
+
+https://bitbucket.org/hiroog/wbhealthmeter/downloads
+
+
+
+2008/01/04 v1.00
+2008/01/05 v1.10
+・Bluetooth Toshiba stack と Bluesoleil に対応しました。ペアリングと接続操作
+　はそれぞれツール固有の接続管理画面で行う必要があります。
+2008/01/14 v1.11
+・Bluetooth 接続ライブラリを更新しました。
+2016/08/06 v1.12
+・OS version, x64 対応
+2016/08/06 v1.13
+・add RealtimeLog
+
+
+小笠原博之 hiroog (at) flatlib.jp
+http://wlog.flatlib.jp/
+http://dench.flatlib.jp/
+

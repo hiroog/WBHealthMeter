@@ -1,0 +1,83 @@
+syntax: glob
+# --common
+*.swp
+lib
+.git
+.svn
+*.png
+*.debug.log
+*.pyc
+*.dds
+*.ktx
+*.dd5
+*.pvr
+*.tga
+*.jpg
+*.bmp
+*.astc
+*.fsb
+*.zip
+*.mp3
+*.ogg
+*.tmp
+*.mdb
+# --windows
+*.obj
+*.pdb
+*.lib
+*.dll
+*.exe
+x64/Debug*
+x64/Release*
+x64/*Debug
+x64/*Release
+Win32/Debug*
+Win32/Release*
+*.ilk
+*.sdf
+*.user
+*.suo
+*.ico
+*.opensdf
+*.opendb
+*.ncb
+*.aps
+*.ncb
+*.vcproj
+*.iobj
+*.ipdb
+*.VC.db
+# --android
+*.o
+*.so
+*.a
+*.class
+*.jar
+*.o.d
+*.iml
+android/build
+android/local.properties
+sys_version.xml
+.gradle
+.idea
+# --osx
+.DS_Store
+*.xcuserstate
+*.xcuserdatad
+*.xcworkspacedata
+*.pch
+*_x64d
+*_x64r
+# --ios
+# --ems
+*.bc
+*.js.map
+*.html.map
+*.data
+*jsd.html
+*jsr.html
+*jsrt.html
+*jsd.js
+*jsr.js
+*jsrt.js
+# -----
